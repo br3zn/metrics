@@ -1,5 +1,6 @@
 <!--header-->
 <table>
+  <tr><td colspan="2"><a href="/README.md#-plugins">← Back to plugins index</a></td></tr>
   <tr><th colspan="2"><h3>🧱 Core</h3></th></tr>
   <tr><td colspan="2" align="center"><p>Global configuration and options</p>
 </td></tr>
@@ -377,7 +378,7 @@ On forks, this feature is disable to take into account any changes you made on i
 <!--options-->
 <table>
   <tr>
-    <td align="center" nowrap="nowrap">Type</i></td><td align="center" nowrap="nowrap">Description</td>
+    <td align="center" nowrap="nowrap">Option</i></td><td align="center" nowrap="nowrap">Description</td>
   </tr>
   <tr>
     <td nowrap="nowrap"><h4><code>token</code></h4></td>
@@ -659,6 +660,7 @@ May increase filesize.</p>
     <td rowspan="2"><p>Use GitHub custom emojis</p>
 <p>GitHub supports additional emojis which are not registered in Unicode standard (:octocat:, :shipit:, :trollface:, ...)
 See full list at <a href="https://api.github.com/emojis">https://api.github.com/emojis</a>.</p>
+<p>This option has no effect when <code>token: NOT_NEEDED</code> is set.</p>
 <p>May increase filesize</p>
 <img width="900" height="1" alt=""></td>
   </tr>
@@ -849,6 +851,61 @@ It can result in cropped or oversized outputs.</p>
 ≤ 3600)</i>
 <br>
 <b>default:</b> 0<br></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><h4><code>quota_required_rest</code></h4></td>
+    <td rowspan="2"><p>Minimum GitHub REST API requests quota required to run</p>
+<p>Action will cancel itself without any errors if requirements are not met</p>
+<p>This option has no effect when <code>token</code> is set to <code>NOT_NEEDED</code></p>
+<img width="900" height="1" alt=""></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
+<i>(0 ≤
+𝑥
+≤ 5000)</i>
+<br>
+<b>default:</b> 200<br></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><h4><code>quota_required_graphql</code></h4></td>
+    <td rowspan="2"><p>Minimum GitHub GraphQL API requests quota required to run</p>
+<p>Action will cancel itself without any errors if requirements are not met</p>
+<p>This option has no effect when <code>token</code> is set to <code>NOT_NEEDED</code></p>
+<img width="900" height="1" alt=""></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
+<i>(0 ≤
+𝑥
+≤ 5000)</i>
+<br>
+<b>default:</b> 200<br></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><h4><code>quota_required_search</code></h4></td>
+    <td rowspan="2"><p>Minimum GitHub Search API requests quota required to run</p>
+<p>Action will cancel itself without any errors if requirements are not met</p>
+<p>This option has no effect when <code>token</code> is set to <code>NOT_NEEDED</code></p>
+<img width="900" height="1" alt=""></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><b>type:</b> <code>number</code>
+<i>(0 ≤
+𝑥
+≤ 30)</i>
+<br>
+<b>default:</b> 0<br></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><h4><code>notice_releases</code></h4></td>
+    <td rowspan="2"><p>Notice about new releases of metrics</p>
+<img width="900" height="1" alt=""></td>
+  </tr>
+  <tr>
+    <td nowrap="nowrap"><b>type:</b> <code>boolean</code>
+<br>
+<b>default:</b> yes<br></td>
   </tr>
   <tr>
     <td nowrap="nowrap"><h4><code>use_prebuilt_image</code></h4></td>

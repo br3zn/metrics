@@ -1,5 +1,6 @@
 <!--header-->
 <table>
+  <tr><td colspan="2"><a href="/README.md#-plugins">← Back to plugins index</a></td></tr>
   <tr><th colspan="2"><h3>♐ Code snippet of the day</h3></th></tr>
   <tr><td colspan="2" align="center"><p>This plugin displays a random code snippet from your recent activity history.</p>
 <blockquote>
@@ -16,7 +17,7 @@ Use at your own risk, <em>metrics</em> and its authors cannot be held responsibl
     <td><code>👤 Users</code> <code>👥 Organizations</code></td>
   </tr>
   <tr>
-    <td><code>🔑 (scopeless)</code> <code>read:org (optional)</code> <code>read:user (optional)</code> <code>repo (optional)</code></td>
+    <td><code>🔑 (scopeless)</code> <code>read:org (optional)</code> <code>read:user (optional)</code> <code>read:packages (optional)</code> <code>repo (optional)</code></td>
   </tr>
   <tr>
     <td colspan="2" align="center">
@@ -32,7 +33,7 @@ Use at your own risk, <em>metrics</em> and its authors cannot be held responsibl
 <!--options-->
 <table>
   <tr>
-    <td align="center" nowrap="nowrap">Type</i></td><td align="center" nowrap="nowrap">Description</td>
+    <td align="center" nowrap="nowrap">Option</i></td><td align="center" nowrap="nowrap">Description</td>
   </tr>
   <tr>
     <td nowrap="nowrap"><h4><code>plugin_code</code></h4></td>

@@ -10,6 +10,8 @@ on:
         required: true
       METRICS_TOKEN_WITH_SCOPES:
         required: true
+      METRICS_TOKEN_PERSONAL:
+        required: true
       PAGESPEED_TOKEN:
         required: true
       SPOTIFY_TOKENS:
@@ -42,7 +44,7 @@ jobs:
       - name: Screenshot markdown example
         if: ${{ success() || failure() }}
         run: |
-          docker run --entrypoint="" --volume=/tmp:/tmp ghcr.io/lowlighter/metrics:master node /metrics/.github/scripts/markdown_example.mjs
+          docker run --rm --entrypoint="" --volume=/tmp:/tmp ghcr.io/lowlighter/metrics:master node /metrics/.github/scripts/markdown_example.mjs
           sudo mv /tmp/metrics.markdown.png /metrics_renders/
       - name: Publish examples
         if: ${{ success() || failure() }}
@@ -94,16 +96,15 @@ jobs:
         uses: lowlighter/metrics@master
         with:
           filename: metrics.sponsors.svg
-          token: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
+          token: ${{ secrets.METRICS_TOKEN_PERSONAL }}
           base: ""
           user: lowlighter
           plugin_sponsors: yes
           plugin_sponsors_past: yes
-          plugin_sponsors_sections: goal
+          plugin_sponsors_sections: list
+          plugin_sponsors_size: 32
           plugins_errors_fatal: yes
           config_display: large
-          extras_js: |
-            document.querySelectorAll(".markdown, .center, .goal-text span:last-child")?.forEach(h2 => h2.remove())
           output_action: none
           delay: 120
       - name: Licenses

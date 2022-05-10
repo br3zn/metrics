@@ -33,7 +33,6 @@ jobs:
       - name: Format code
         run: |
           dprint fmt --config .github/config/dprint.json
-          npm run format
       - name: Publish formatted code
         run: |
           set +e
@@ -143,6 +142,7 @@ jobs:
     secrets:
       METRICS_TOKEN: ${{ secrets.METRICS_TOKEN }}
       METRICS_TOKEN_WITH_SCOPES: ${{ secrets.METRICS_TOKEN_WITH_SCOPES }}
+      METRICS_TOKEN_PERSONAL: ${{ secrets.METRICS_TOKEN_PERSONAL }}
       PAGESPEED_TOKEN: ${{ secrets.PAGESPEED_TOKEN }}
       SPOTIFY_TOKENS: ${{ secrets.SPOTIFY_TOKENS }}
       STOCK_TOKEN: ${{ secrets.STOCK_TOKEN }}
